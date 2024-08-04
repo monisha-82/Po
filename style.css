@@ -110,6 +110,7 @@
 
 .devPic img {
     height: 58vh;
+    border-radius: 15px;
 }
 
 .contactform {
