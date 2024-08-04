@@ -215,6 +215,10 @@ p {
     background-color: rgb(255, 255, 0);
 }
 
+input {
+    background-color: rgb(76, 80, 87);
+}
+
 @media (max-width: 548px) {
     * {
         background-color: rgb(219, 140, 140);
