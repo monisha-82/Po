@@ -7,7 +7,7 @@
 }
 
 .sidebar {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(10, 10, 10);
     width: 220px;
     font-family: 'Fira Sans', sans-serif;
     height: 100vh;
@@ -25,11 +25,15 @@
 
 .sidebar nav li a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 233, 233);
+}
+
+.sidebar nav li a:hover {
+    color: rgb(181, 231, 253);
 }
 
 .main {
-    /* background-color: rgb(190, 154, 110); */
+    background-color: rgba(12, 12, 11, 0.884);
     width: 90vw;
 }
 
@@ -38,7 +42,6 @@
 }
 
 .infoContainer {
-    /* background-color: chocolate; */
     height: 50vh;
     width: 80vw;
     margin: 81px auto;
@@ -47,6 +50,7 @@
 }
 
 .devInfo {
+    color: rgb(219, 238, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +74,12 @@
 .aboutmore {
     font-size: 16px;
     margin-top: 18px;
+    margin-bottom: 40px;
     font-family: 'Fira Sans', sans-serif;
+}
+
+.location {
+    margin-top: 10px;
 }
 
 .buttons {
@@ -80,8 +89,8 @@
 .btn {
     padding: 9px 14px;
     border-radius: 22px;
-    color: white;
-    background-color: rgb(52, 52, 163);
+    color: rgb(255, 238, 193);
+    background-color: rgb(34, 97, 116);
     font-weight: bold;
     font-size: 20px;
     margin: 0 3px;
@@ -94,8 +103,8 @@
 }
 
 .btn:hover {
-    color: rgb(52, 52, 163);
-    background-color: white;
+    color: rgb(34, 97, 116);
+    background-color: rgb(255, 238, 193);
 }
 
 .devPic img {
@@ -103,6 +112,7 @@
 }
 
 .contactform {
+    color: rgb(219, 238, 255);
     font-family: 'Fira Sans', sans-serif;
     padding: 0 34px;
     padding-top: 144px;
@@ -128,7 +138,7 @@
 
 #emailHelp {
     font-size: 11px;
-    color: midnightblue;
+    color: rgb(120, 120, 247);
     margin: 0 5px;
     padding: 3px 0 0 0;
 }
