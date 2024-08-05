@@ -36,6 +36,7 @@
     background-color: rgba(12, 12, 11, 0.884);
     color: rgb(219, 238, 255);
     width: 90vw;
+    height: 100vh;
 }
 
 .container {
@@ -117,7 +118,7 @@
     color: rgb(219, 238, 255);
     font-family: 'Fira Sans', sans-serif;
     padding: 0 34px;
-    padding-top: 144px;
+    padding-top: 10px;
 }
 
 .contactform h1 {
