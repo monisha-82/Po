@@ -179,7 +179,7 @@ p {
     margin: 12px;
 }
 
-.shillConatiner {
+.skillsContainer {
     padding: 12px;
 }
 
@@ -193,28 +193,56 @@ p {
 .skill {
     width: 263px;
     height: 10px;
-    background-color: brown;
-    border: 2px solid black;
+    background-color: rgb(42, 91, 184);
+    border: 1px solid rgb(25, 66, 247);
+}
+
+.thirty {
+    width: 77px;
+}
+
+.fifty {
+    width: 128px;
+}
+
+.sixty {
+    width: 154px;
+}
+
+.seventy {
+    width: 180px;
+}
+
+.ninety {
+    width: 230px;
 }
 
 .hundred {
     width: 265px;
-    background-color: green;
 }
 
-.s5 {
-    width: 265px;
-    background-color: rgb(55, 255, 65);
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: 6px 0px -4px;
+    fill: rgb(219, 238, 255);
+    vertical-align: middle;
 }
 
-.fifty {
-    width: 125px;
-    background-color: rgb(167, 199, 52);
+.text {
+    font-size: 16px;
 }
 
-.t5 {
-    width: 75px;
-    background-color: rgb(255, 255, 0);
+.tab1 {
+    tab-size: 2;
+}
+
+.tab2 {
+    tab-size: 4;
+}
+
+.tab3 {
+    tab-size: 8;
 }
 
 input {
