@@ -11,6 +11,7 @@
 
 <body>
     <div class="container">
+        <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
         <div class="sidebar">
             <!-- Monisha -->
             <nav>
@@ -69,6 +70,11 @@
 
         </div>
     </div>
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
