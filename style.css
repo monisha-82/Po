@@ -4,13 +4,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Sidebar */
 .sidebar {
     background-color: rgb(10, 10, 10);
     width: 220px;
     font-family: 'Fira Sans', sans-serif;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
 }
 
 .sidebar nav {
@@ -32,23 +38,36 @@
     color: rgb(181, 231, 253);
 }
 
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 .main {
     background-color: rgba(12, 12, 11, 0.884);
     color: rgb(219, 238, 255);
-    width: 90vw;
-    height: 100vh;
+    margin-left: 165px;
+    padding: 20px;
+    overflow: auto;
+    min-height: 100vh;
+    width: calc(100% - 165px);
 }
 
 .container {
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .infoContainer {
-    height: 50vh;
-    width: 80vw;
-    margin: 81px auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .devInfo {
@@ -57,6 +76,7 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Source Code Pro', monospace;
+    max-width: 500px;
 }
 
 .hello {
@@ -85,7 +105,9 @@
 }
 
 .buttons {
-    margin-top: 30px 3px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -95,11 +117,13 @@
     background-color: rgb(34, 97, 116);
     font-weight: bold;
     font-size: 20px;
-    margin: 0 3px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .btn-sn {
-    font-size: 10px;
+    font-size: 12px;
     padding: 7px 13px;
     margin: 10px 0;
 }
@@ -110,14 +134,16 @@
 }
 
 .devPic img {
-    height: 70vh;
-    border-radius: 5000px;
+    height: 50vh;
+    border-radius: 50%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .contactform {
     color: rgb(219, 238, 255);
     font-family: 'Fira Sans', sans-serif;
-    padding: 0 34px;
+    padding: 0 20px;
     padding-top: 10px;
 }
 
@@ -133,10 +159,11 @@
 }
 
 .contactform form div input {
-    width: 26vw;
+    width: 100%;
+    max-width: 400px;
     border-radius: 5px;
     margin: 6px 0 0;
-    padding: 3px;
+    padding: 8px;
 }
 
 #emailHelp {
@@ -191,58 +218,47 @@ p {
 }
 
 .skill {
-    width: 263px;
+    width: 100%;
+    max-width: 265px;
     height: 10px;
     background-color: rgb(42, 91, 184);
     border: 1px solid rgb(25, 66, 247);
 }
 
 .thirty {
-    width: 77px;
+    width: 30%;
 }
 
 .fifty {
-    width: 128px;
+    width: 50%;
 }
 
 .sixty {
-    width: 154px;
+    width: 60%;
 }
 
 .seventy {
-    width: 180px;
+    width: 70%;
 }
 
 .ninety {
-    width: 230px;
+    width: 90%;
 }
 
 .hundred {
-    width: 265px;
+    width: 100%;
 }
 
 .icon {
     width: 24px;
     height: 24px;
-    margin: 6px 0px -4px;
+    margin: 6px 10px -4px;
     fill: rgb(219, 238, 255);
     vertical-align: middle;
 }
 
 .text {
     font-size: 16px;
-}
-
-.tab1 {
-    tab-size: 2;
-}
-
-.tab2 {
-    tab-size: 4;
-}
-
-.tab3 {
-    tab-size: 8;
 }
 
 input {
@@ -252,9 +268,8 @@ input {
 .social-media {
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 20px;
-    width: 90vw;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .social-icon {
@@ -274,13 +289,96 @@ input {
     color: #f3eded;
 }
 
-@media (max-width: 548px) {
-    * {
-        background-color: rgb(219, 140, 140);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .devPic img {
+        height: auto;
+        max-width: 80%;
+        margin: 20px 0;
     }
 
     .sidebar {
-        transform: translate(-500px, 0px);
-        position: absolute;
+        width: 220px;
+        height: 100vh;
+        position: fixed;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar nav {
+        padding: 10px;
+    }
+
+    .sidebar nav li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contactform form div input {
+        width: 100%;
+    }
+
+    .social-media {
+        position: relative;
+        bottom: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 548px) {
+    .infoContainer {
+        margin-top: 20px;
+    }
+
+    .devInfo {
+        text-align: center;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .sidebar {
+        display: block;
+        transform: translateX(-100%);
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        margin-left: 0;
     }
 }
