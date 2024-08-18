@@ -216,6 +216,17 @@ p {
     align-items: center;
     font-family: 'Source Code Pro', monospace;
     font-weight: 900;
+    margin-left: 0;
+}
+
+.skillItem .icon svg {
+    display: block;
+    margin-left: -10px;
+    padding: 0;
+}
+
+.skillItem .icon {
+    margin-right: -10px;
 }
 
 .skill {
