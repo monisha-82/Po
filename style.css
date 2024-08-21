@@ -135,10 +135,11 @@ body {
 }
 
 .devPic img {
-    height: 50vh;
-    border-radius: 50%;
+    height: 58vh;
     max-width: 100%;
+    border-radius: 50%;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 .contactform {
@@ -278,10 +279,13 @@ input {
 }
 
 .social-media {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 20px 0;
     width: 100%;
+    text-align: center;
 }
 
 .social-icon {
@@ -319,7 +323,7 @@ input {
 
     .devPic img {
         height: auto;
-        max-width: 80%;
+        max-width: 75%;
         margin: 20px 0;
     }
 
