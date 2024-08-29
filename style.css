@@ -296,7 +296,7 @@ input {
 }
 
 .social-icon:hover {
-    background-color: #cecece;
+    background-color: rgba(12, 12, 11, 0.884);
     color: #1d3ffc;
 }
 
